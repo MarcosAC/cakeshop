@@ -10,6 +10,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
+  ButtonStyle style = ElevatedButton.styleFrom(
+    backgroundColor: Colors.pink,
+    foregroundColor: Colors.white,
+  );
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -28,19 +33,22 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text("Bem vindo!"),
-            // Expanded(
-            //   child: ListView(
-            //     scrollDirection: Axis.horizontal,
-            //     children: [
-            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-            //     ],
-            //   ),
-            // ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: style,
+                    child: const Text("Bolos"),
+                  ),
+                  const SizedBox(width: 15),
+                  ElevatedButton(onPressed: () {}, style: style, child: const Text("Doces")),
+                  const SizedBox(width: 15),
+                  ElevatedButton(onPressed: () {}, style: style, child: const Text("Sobre Mesas")),
+                ],
+              ),
+            ),
             Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -139,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.pink,
         onTap: _onItemTapped,
-      ),     
+      ),
     );
   }
 }
