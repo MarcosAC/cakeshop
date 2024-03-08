@@ -8,6 +8,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,19 +28,19 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text("Bem vindo!"),
-            Expanded(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-                  ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-                  ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-                  ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-                  ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-                  ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
-                ],
-              ),
-            ),
+            // Expanded(
+            //   child: ListView(
+            //     scrollDirection: Axis.horizontal,
+            //     children: [
+            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
+            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
+            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
+            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
+            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
+            //       ElevatedButton(onPressed: () {}, child: const Text("Bolo")),
+            //     ],
+            //   ),
+            // ),
             Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -120,6 +128,18 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.cake_outlined), label: 'Bolos'),
+          BottomNavigationBarItem(icon: Icon(Icons.card_giftcard_outlined), label: 'Doces'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_outline), label: 'Amei'),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.pink,
+        onTap: _onItemTapped,
+      ),     
     );
   }
 }
