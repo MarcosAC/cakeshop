@@ -1,3 +1,4 @@
+import 'package:cakeshop/widgets/menu_horizontal.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,15 +10,22 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  int _selctedIndexMenuHorizontal = -1;
 
-  ButtonStyle style = ElevatedButton.styleFrom(
-    backgroundColor: Colors.pink,
-    foregroundColor: Colors.white,
-  );
+  // ButtonStyle style = ElevatedButton.styleFrom(
+  //   backgroundColor: Colors.pink,
+  //   foregroundColor: Colors.white,
+  // );
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+    });
+  }
+
+  void _onItemTappedMenuHorizontal(int index) {
+    setState(() {
+      _selctedIndexMenuHorizontal = index;
     });
   }
 
@@ -33,22 +41,12 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text("Bem vindo!"),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: style,
-                    child: const Text("Bolos"),
-                  ),
-                  const SizedBox(width: 15),
-                  ElevatedButton(onPressed: () {}, style: style, child: const Text("Doces")),
-                  const SizedBox(width: 15),
-                  ElevatedButton(onPressed: () {}, style: style, child: const Text("Sobre Mesas")),
-                ],
-              ),
+            //const MenuHorizontal(),
+            MenuHorizontal(
+              selectedIndex: _selctedIndexMenuHorizontal,
+              onButtonPressed: _onItemTappedMenuHorizontal,
             ),
+
             Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
