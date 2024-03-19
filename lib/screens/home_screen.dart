@@ -12,11 +12,6 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _selctedIndexMenuHorizontal = -1;
 
-  // ButtonStyle style = ElevatedButton.styleFrom(
-  //   backgroundColor: Colors.pink,
-  //   foregroundColor: Colors.white,
-  // );
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -41,7 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text("Bem vindo!"),
-            //const MenuHorizontal(),
             MenuHorizontal(
               selectedIndex: _selctedIndexMenuHorizontal,
               onButtonPressed: _onItemTappedMenuHorizontal,

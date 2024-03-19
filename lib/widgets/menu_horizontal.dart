@@ -20,7 +20,7 @@ class MenuHorizontal extends StatelessWidget {
           const SizedBox(width: 15),
           _buildButton(1, "Doces"),
           const SizedBox(width: 15),
-          _buildButton(2, "Donuts"),
+          _buildButton(2, "Mini Donuts"),
           const SizedBox(width: 15),
           _buildButton(3, "Sobre Mesas"),
         ],
@@ -46,37 +46,3 @@ class MenuHorizontal extends StatelessWidget {
     );
   }
 }
-
-
-
-
-// import 'package:flutter/material.dart';
-
-// class MenuHorizontal extends StatelessWidget {
-//   const MenuHorizontal({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     ButtonStyle style = ElevatedButton.styleFrom(
-//       backgroundColor: Colors.pink,
-//       foregroundColor: Colors.white,
-//     );
-
-//     return SingleChildScrollView(
-//       scrollDirection: Axis.horizontal,
-//       child: Row(
-//         children: [
-//           ElevatedButton(
-//             onPressed: () {},
-//             style: style,
-//             child: const Text("Bolos"),
-//           ),
-//           const SizedBox(width: 15),
-//           ElevatedButton(onPressed: () {}, style: style, child: const Text("Doces")),
-//           const SizedBox(width: 15),
-//           ElevatedButton(onPressed: () {}, style: style, child: const Text("Sobre Mesas")),
-//         ],
-//       ),
-//     );
-//   }
-// }
