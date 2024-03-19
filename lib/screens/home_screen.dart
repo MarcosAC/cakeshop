@@ -31,60 +31,60 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Center(child: Text("Cake Shop")),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text("Bem vindo!"),
+            const SizedBox(height: 10),
             MenuHorizontal(
               selectedIndex: _selctedIndexMenuHorizontal,
               onButtonPressed: _onItemTappedMenuHorizontal,
             ),
-
+            const SizedBox(height: 15),
             Expanded(
+              flex: 3,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
                   Card(
                     child: SizedBox(
-                      width: 100,
-                      height: 300,
+                      width: 200,
                       child: Center(child: Text("Foto com bolo")),
                     ),
                   ),
                   Card(
                     child: SizedBox(
-                      width: 100,
-                      height: 300,
+                      width: 200,
                       child: Center(child: Text("Foto com bolo")),
                     ),
                   ),
                   Card(
                     child: SizedBox(
-                      width: 100,
-                      height: 300,
+                      width: 200,
                       child: Center(child: Text("Foto com bolo")),
                     ),
                   ),
                   Card(
                     child: SizedBox(
-                      width: 100,
-                      height: 300,
+                      width: 200,
                       child: Center(child: Text("Foto com bolo")),
                     ),
                   ),
                   Card(
                     child: SizedBox(
-                      width: 100,
-                      height: 300,
+                      width: 200,
                       child: Center(child: Text("Foto com bolo")),
                     ),
                   ),
                 ],
               ),
             ),
+            const SizedBox(height: 20),
             const Text("Os mais pedidos"),
+            const SizedBox(height: 10),
             Expanded(
+              flex: 2,
               child: ListView(
                 children: const [
                   Card(
