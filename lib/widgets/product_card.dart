@@ -12,7 +12,9 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Card(
+      color: Colors.white,
       elevation: 4,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -25,19 +27,23 @@ class ProductCard extends StatelessWidget {
             child: Image.asset(
               imageUrl,
               fit: BoxFit.cover,
-              width: 200,
-              //height: 200,
+              width: screenSize.width * 0.6,
+              height: screenSize.height * 0.25,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              productName,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 8, top: 10),
+                child: Text(
+                  productName,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),

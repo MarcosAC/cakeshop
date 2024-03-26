@@ -44,42 +44,42 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 15),
             Expanded(
-              flex: 5,
+              flex: 3,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
                   ),
                   ProductCard(
-                    productName: 'Bolo',
+                    productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
-                  ),                  
+                  ),
                 ],
               ),
             ),
