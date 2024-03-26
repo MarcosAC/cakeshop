@@ -1,4 +1,5 @@
 import 'package:cakeshop/widgets/menu_horizontal.dart';
+import 'package:cakeshop/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -43,40 +44,42 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 15),
             Expanded(
-              flex: 3,
+              flex: 5,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
-                  Card(
-                    child: SizedBox(
-                      width: 200,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 200,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 200,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 200,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 200,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
+                  ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
+                  ),
+                  ProductCard(
+                    productName: 'Bolo',
+                    imageUrl: 'assets/bolomorango.jpg',
+                  ),                  
                 ],
               ),
             ),
