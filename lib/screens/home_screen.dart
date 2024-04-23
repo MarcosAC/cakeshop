@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text("Cake Shop")),
@@ -81,42 +82,259 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               flex: 2,
               child: ListView(
-                children: const [
+                children: [
                   Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: SizedBox(
-                      width: 300,
                       height: 100,
-                      child: Center(child: Text("Foto com bolo")),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
                     ),
                   ),
                   Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: SizedBox(
-                      width: 300,
                       height: 100,
-                      child: Center(child: Text("Foto com bolo")),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
                     ),
                   ),
                   Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: SizedBox(
-                      width: 300,
                       height: 100,
-                      child: Center(child: Text("Foto com bolo")),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
                     ),
                   ),
                   Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: SizedBox(
-                      width: 300,
                       height: 100,
-                      child: Center(child: Text("Foto com bolo")),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
                     ),
                   ),
                   Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: SizedBox(
-                      width: 300,
                       height: 100,
-                      child: Center(child: Text("Foto com bolo")),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
                     ),
                   ),
+                  Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: SizedBox(
+                      height: 100,
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
+                    ),
+                  ),
+                  Card(
+                    color: Colors.white,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: SizedBox(
+                      height: 100,
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bolomorango.jpg',
+                              fit: BoxFit.cover,
+                              width: 100,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bolo de Chocolate!!!"),
+                                Text("Recheio de Geleia de Morango!!!", style: TextStyle(fontSize: 10)),
+                                Text("R\$ 70,00"),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_bag_outlined))
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
