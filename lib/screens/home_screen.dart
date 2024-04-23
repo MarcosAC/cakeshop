@@ -71,15 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ProductCard(
                     productName: 'Bolo de chocolate',
                     imageUrl: 'assets/bolomorango.jpg',
-                  ),
-                  ProductCard(
-                    productName: 'Bolo de chocolate',
-                    imageUrl: 'assets/bolomorango.jpg',
-                  ),
-                  ProductCard(
-                    productName: 'Bolo de chocolate',
-                    imageUrl: 'assets/bolomorango.jpg',
-                  ),
+                  )
                 ],
               ),
             ),
