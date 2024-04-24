@@ -1,4 +1,6 @@
 import 'package:cakeshop/widgets/menu_horizontal.dart';
+import 'package:cakeshop/widgets/product_card.dart';
+import 'package:cakeshop/widgets/product_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,100 +30,95 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("Cake Shop")),
+        title: const Center(child: Text('Cake Shop')),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Bem vindo!"),
+            const Text('Bem vindo!'),
+            const SizedBox(height: 10),
             MenuHorizontal(
               selectedIndex: _selctedIndexMenuHorizontal,
               onButtonPressed: _onItemTappedMenuHorizontal,
             ),
-
+            const SizedBox(height: 15),
             Expanded(
+              flex: 3,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      height: 300,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo de chocolate',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      height: 300,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo de chocolate',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      height: 300,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo de chocolate',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      height: 300,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo de chocolate',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      height: 300,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductCard(
+                    productName: 'Bolo de chocolate',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
+                  ProductCard(
+                    productName: 'Bolo de chocolate',
+                    imageUrl: 'assets/bolomorango.jpg',
+                  )
                 ],
               ),
             ),
-            const Text("Os mais pedidos"),
+            const SizedBox(height: 20),
+            const Text('Os mais pedidos'),
+            const SizedBox(height: 10),
             Expanded(
+              flex: 2,
               child: ListView(
                 children: const [
-                  Card(
-                    child: SizedBox(
-                      width: 300,
-                      height: 100,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductList(
+                    productName: 'Bolo de Chocolate!!!',
+                    description: 'Recheio de Geleia de Morango!!!',
+                    price: 'R\$ 70,00',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 300,
-                      height: 100,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductList(
+                    productName: 'Bolo de Chocolate!!!',
+                    description: 'Recheio de Geleia de Morango!!!',
+                    price: 'R\$ 70,00',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 300,
-                      height: 100,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductList(
+                    productName: 'Bolo de Chocolate!!!',
+                    description: 'Recheio de Geleia de Morango!!!',
+                    price: 'R\$ 70,00',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 300,
-                      height: 100,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductList(
+                    productName: 'Bolo de Chocolate!!!',
+                    description: 'Recheio de Geleia de Morango!!!',
+                    price: 'R\$ 70,00',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
-                  Card(
-                    child: SizedBox(
-                      width: 300,
-                      height: 100,
-                      child: Center(child: Text("Foto com bolo")),
-                    ),
+                  ProductList(
+                    productName: 'Bolo de Chocolate!!!',
+                    description: 'Recheio de Geleia de Morango!!!',
+                    price: 'R\$ 70,00',
+                    imageUrl: 'assets/bolomorango.jpg',
                   ),
+                  ProductList(
+                    productName: 'Bolo de Chocolate!!!',
+                    description: 'Recheio de Geleia de Morango!!!',
+                    price: 'R\$ 70,00',
+                    imageUrl: 'assets/bolomorango.jpg',
+                  )
                 ],
               ),
             ),
