@@ -16,13 +16,13 @@ class MenuHorizontal extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          _buildButton(0, "Bolos"),
+          _buildButton(0, 'Bolos'),
           const SizedBox(width: 15),
-          _buildButton(1, "Doces"),
+          _buildButton(1, 'Doces'),
           const SizedBox(width: 15),
-          _buildButton(2, "Mini Donuts"),
+          _buildButton(2, 'Mini Donuts'),
           const SizedBox(width: 15),
-          _buildButton(3, "Sobre Mesas"),
+          _buildButton(3, 'Sobre Mesas'),
         ],
       ),
     );
