@@ -1,4 +1,5 @@
 import 'package:cakeshop/screens/home_screen.dart';
+import 'package:cakeshop/screens/product_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const ProductDetailScreen(),
     );
   }
 }
