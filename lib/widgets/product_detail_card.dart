@@ -21,6 +21,7 @@ class ProductDetailCard extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       child: Card(
+        //clipBehavior: Clip.antiAlias,
         color: Colors.white,
         elevation: 4,
         shape: RoundedRectangleBorder(
@@ -36,9 +37,9 @@ class ProductDetailCard extends StatelessWidget {
             Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 8, top: 10),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(productName),
                       Text(description, style: const TextStyle(fontSize: 10)),
@@ -49,6 +50,16 @@ class ProductDetailCard extends StatelessWidget {
                       ),
                       const Text('Sobre o Bolo'),
                       Text(detailDescription, style: const TextStyle(fontSize: 10)),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xffFE3A48),
+                        ),
+                        child: const Text(
+                          'Adicionar ao Carrinho',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      )
                     ],
                   ),
                 ),
