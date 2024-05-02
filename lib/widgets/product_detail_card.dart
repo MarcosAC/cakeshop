@@ -18,10 +18,8 @@ class ProductDetailCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       child: Card(
-        //clipBehavior: Clip.antiAlias,
         color: Colors.white,
         elevation: 4,
         shape: RoundedRectangleBorder(
